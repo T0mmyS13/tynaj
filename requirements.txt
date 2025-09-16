@@ -1,0 +1,9 @@
+# Základní požadavky pro Python datové struktury cvičení
+jupyter>=1.0.0
+notebook>=6.0.0
+ipython>=7.0.0
+
+# Volitelné užitečné balíčky
+matplotlib>=3.3.0
+pandas>=1.2.0
+numpy>=1.19.0
