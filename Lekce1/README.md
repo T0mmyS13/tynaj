@@ -1,148 +1,144 @@
-# Python Datové struktury – Cvičení 📚
+# 🔑 Řešení úkolů - Datové struktury v Pythonu
 
-> **Praktická cvičení pro studenty** - Základní datové struktury v Pythonu
+## 📖 O tomto souboru
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+Tento README popisuje notebook `reseni.ipynb`, který obsahuje **kompletní řešení všech úkolů** z Lekce 1 o datových strukturách v Pythonu.
 
-## 📋 O projektu
+## 🎯 Účel notebooku
 
-Tento repository obsahuje praktická cvičení zaměřená na základní datové struktury v Pythonu. Studentům umožňuje procvičit si práci se seznamy, n-ticemi, množinami a slovníky na reálných příkladech.
+### Pro lektory:
+- ✅ Kontrola správnosti řešení studentů
+- 📝 Referenční materiál pro výuku
+- 💡 Alternativní způsoby řešení úkolů
+- ⚡ Rychlé ověření funkčnosti kódu
 
-## 🎯 Co se naučíš
+### Pro studenty:
+- 🔍 Porovnání vlastního řešení
+- 📚 Učení se z příkladů
+- 🚀 Inspirace pro pokročilejší techniky
 
-- **📋 Seznamy (List)** - práce s měnitelnými, uspořádanými kolekcemi
-- **📦 N-tice (Tuple)** - použití neměnitelných, uspořádaných kolekcí
-- **🔢 Množiny (Set)** - operace s unikátními prvky
-- **📖 Slovníky (Dict)** - párování klíčů s hodnotami
+## 📋 Obsah řešení
 
-## 🚀 Jak začít
+### 1. Seznamy (Lists)
+**Úkoly:**
+- Vytvoření seznamu oblíbených filmů
+- Přidávání a odebírání prvků
+- Řazení podle abecedy
+- Přístup k prvnímu a poslednímu prvku
 
-### 1. Stáhni si repository
+**Řešené koncepty:**
+- `append()`, `remove()`, `sort()`
+- Indexování `[0]`, `[-1]`
+- Základní operace se seznamy
 
-#### Možnost A: Clone přes Git
-```bash
-git clone https://github.com/username/python-datove-struktury-cviceni.git
-cd python-datove-struktury-cviceni
-```
+### 2. N-tice (Tuples)
+**Úkoly:**
+- Vytváření n-tic se souřadnicemi
+- Demonstrace neměnitelnosti
+- Práce s informacemi o městě
 
-#### Možnost B: Stáhni ZIP
-1. Klikni na zelené tlačítko "Code" 
-2. Vyber "Download ZIP"
-3. Rozbal archiv na svém počítači
+**Řešené koncepty:**
+- Neměnitelnost n-tic
+- Rozbalování (unpacking)
+- Praktické použití pro strukturovaná data
 
-### 2. Otevři Jupyter Notebook
+### 3. Množiny (Sets)
+**Úkoly:**
+- Automatické odstranění duplicit
+- Sjednocení a průnik množin
+- Bezpečné odebírání prvků
 
-```bash
-# Spusť Jupyter Notebook
-jupyter notebook
+**Řešené koncepty:**
+- Operace s množinami (`|`, `&`, `-`)
+- `discard()` vs `remove()`
+- Unikátnost prvků
 
-# Nebo Jupyter Lab
-jupyter lab
-```
+### 4. Slovníky (Dictionaries)
+**Úkoly:**
+- Vytváření slovníku o studentovi
+- Přidávání nových klíčů
+- Procházení klíčů a hodnot
+- Úprava existujících hodnot
 
-### 3. Otevři soubor cvičení
+**Řešené koncepty:**
+- `keys()`, `values()`, `items()`
+- Bezpečný přístup s `get()`
+- Iterování přes slovník
 
-Najdi a otevři soubor `python_datove_struktury_cviceni.ipynb`
+### 5. Mini projekt - Knihy
+**Úkoly:**
+- Práce se seznamem slovníků
+- Filtrování podle podmínek
+- Řazení podle kritérií
 
-## 📁 Struktura projektu
+**Řešené koncepty:**
+- Vnořené datové struktury
+- `sorted()` s `key` parametrem
+- List comprehensions (bonus)
 
-```
-python-datove-struktury-cviceni/
-│
-├── python_datove_struktury_cviceni.ipynb  # Hlavní notebook s cvičeními
-├── README.md                               # Tento soubor
-├── requirements.txt                        # Python závislosti
-└── .gitignore                             # Git ignore soubor
-```
-
-## 💻 Požadavky
+## 🛠️ Technické požadavky
 
 - **Python 3.8+**
-- **Jupyter Notebook** nebo **Jupyter Lab**
+- **Jupyter Notebook** nebo **VS Code** s rozšířením pro notebooky
+- Žádné externí knihovny nejsou potřeba
 
-### Instalace závislostí
+## 🚀 Jak používat
 
-```bash
-# Vytvoř virtuální prostředí (doporučeno)
-python -m venv venv
+### Pro lektory:
+1. Otevřete `reseni.ipynb` v Jupyter/VS Code
+2. Spusťte všechny buňky (`Ctrl+Shift+P` → "Run All")
+3. Používejte jako referenci při kontrole studentských prací
+4. Můžete kopírovat části kódu pro demonstrace
 
-# Aktivuj virtuální prostředí
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
+### Pro studenty:
+1. **NEJDŘÍVE** se pokuste vyřešit úkoly v `lekce1.ipynb`
+2. Teprve pak se podívejte na řešení v `reseni.ipynb`
+3. Porovnejte své řešení s naším
+4. Studujte alternativní přístupy
 
-# Nainstaluj závislosti
-pip install -r requirements.txt
+## 📚 Pokročilé techniky v řešeních
+
+### List Comprehensions
+```python
+# Místo cyklu:
+nazvy = [kniha["nazev"] for kniha in knihy]
+
+# Místo filtru:
+knihy_po_1950 = [kniha for kniha in knihy if kniha["rok"] > 1950]
 ```
 
-## 📖 Obsah cvičení
+### Bezpečná práce s daty
+```python
+# Bezpečné odebírání ze setu
+mnozina.discard("prvek")  # nevyvolá chybu
 
-### 1. 📋 Seznamy (List)
-- Vytváření a manipulace se seznamy
-- Přidávání, odebírání a řazení prvků
-- Indexování a slicing
+# Bezpečný přístup ke slovníku
+hodnota = slovnik.get("klic", "vychozi_hodnota")
+```
 
-### 2. 📦 N-tice (Tuple)  
-- Práce s neměnitelnými daty
-- Rozbalování (unpacking)
-- Kdy použít n-tice místo seznamů
+### Práce s vnořenými strukturami
+```python
+# Řazení seznamu slovníků
+serazene = sorted(seznam, key=lambda item: item["klic"])
+```
 
-### 3. 🔢 Množiny (Set)
-- Operace s unikátními prvky
-- Sjednocení, průnik a rozdíl množin
-- Odstraňování duplicit
+## ⚠️ Doporučení
 
-### 4. 📖 Slovníky (Dict)
-- Párování klíčů s hodnotami
-- Procházení slovníků
-- Praktické použití
+### Pro studenty:
+- Neopisujte řešení mechanicky
+- Snažte se pochopit logiku každého kroku
+- Experimentujte s vlastními variacemi
+- Pokud něčemu nerozumíte, zeptejte se lektora
 
-### 5. 🚀 Mini projekt
-- Práce se seznamem slovníků
-- Simulace databáze knih
-- Filtrování a řazení dat
+### Pro lektory:
+- Ukažte různé způsoby řešení stejného problému
+- Zdůrazněte kdy použít kterou datovou strukturu
+- Diskutujte výhody a nevýhody různých přístupů
 
-## 🎮 Jak pracovat s cvičeními
+## 📞 Kontakt
 
-1. **Přečti si zadání** každé sekce
-2. **Použij připomenutí syntaxe** jako referenci
-3. **Napiš svůj kód** do prázdných buněk
-4. **Spusť kód** pomocí Shift + Enter
-5. **Zkontroluj výsledek** a pokračuj dál
-
-## 💡 Tipy pro úspěch
-
-- ✅ Neboj se experimentovat s kódem
-- ✅ Používej `print()` pro kontrolu výsledků
-- ✅ Pokud uvázneš, vrať se k připomenutí syntaxe
-- ✅ Zkus nejdříve sám, pak se podívej na řešení
-- ✅ Procvič si každý příklad více než jednou
-
-## 🆘 Potřebuješ pomoc?
-
-- 📖 [Oficiální dokumentace Pythonu](https://docs.python.org/3/)
-- 🎓 [Python Tutorial](https://docs.python.org/3/tutorial/)
-- 💬 Zeptej se spolužáků nebo učitele
-- 🔍 Google je tvůj přítel pro specifické problémy
-
-## 📄 Licence
-
-Tento projekt je pod licencí MIT - viz [LICENSE](LICENSE) soubor pro detaily.
-
-## 🤝 Přispívání
-
-Pokud najdeš chybu nebo máš nápad na vylepšení:
-
-1. Vytvoř Issue s popisem problému
-2. Nebo rovnou vytvoř Pull Request s opravou
-3. Každá zpětná vazba je vítána!
-
-## ⭐ Líbí se ti tento projekt?
-
-Nezapomeň dát hvězdu! ⭐
+Máte-li dotazy k řešením nebo návrhy na vylepšení, kontaktujte lektora nebo vytvořte issue v repozitáři.
 
 ---
 
-**Hodně štěstí s programováním! 🐍💻**
+*Tento notebook je součástí kurzu "Learning Python" - praktického kurzu programování v Pythonu.*
